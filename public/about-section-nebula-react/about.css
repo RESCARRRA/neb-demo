@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+@import url(https://fonts.googleapis.com/css?family=Codystar);
+@import url(https://fonts.googleapis.com/css?family=Alegreya);
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body {
+  /*background-color: #15004b;*/
+  background-image: url('neb-particle.png');
+  font-family: Raleway;
+  color: #15004b;
+  animation-name: fadeIn;
+  animation-duration: 4.5s;
+  animation-delay: 0.1s;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: left-justified;
+  justify-content: center;
+}
+.well {
+  font-size: 36px;
+  margin: 0 !important;
+  align-self: center;
+  font-weight: bold;
+  border-radius: 0;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  border-bottom: solid;
+  color: #15004b;
+  background-color: translucent;
+  width: 55vw;
+  max-width: 700px;
+  min-width: 500px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23) !important;
+}
+.socialList {
+  list-style-type: none;
+  text-align: center;
+}
+.icon {
+  margin: 5px;
+  font-size: 22px;
+  vertical-align: middle;
+}
+.panel-group {
+  width: 55vw;
+  max-width: 700px;
+  min-width: 500px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23) !important;
+}
+.my-panel-heading {
+  text-decoration: none;
+  font-size: 22px;
+}
+.panel-group {
+  align-self: center;
+}
+.panel {
+  background-color: translucent;
+  border: none;
+  border-radius: 0 !important;
+  margin: 0 !important;
+}
+.panel-heading {
+  background-color: translucent !important;
+}
+a:link,
+a:visited,
+a:active {
+  color: #15004b;
+  text-decoration: none;
+}
+a:hover {
+  color: #E74C3C;
+}
+#top {
+  margin-bottom: 20px;
+}

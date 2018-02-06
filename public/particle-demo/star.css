@@ -1,0 +1,89 @@
+/* @import url('https://fonts.googleapis.com/css?family=Raleway+Dots');
+<style>*/
+
+@import url('https://fonts.googleapis.com/css?family=Codystar|Julius+Sans+One|Raleway+Dots|Raleway:200');
+/*font-family: 'Raleway Dots', cursive;
+font-family: 'Raleway', sans-serif;
+font-family: 'Codystar', cursive;
+font-family: 'Julius Sans One', sans-serif;*/
+
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #17182f;
+}
+/*  background-image: url('images/net-twinkle.gif');
+*/ /* background-image: url('images/nebula3d.jpg')*/
+
+/*canvas {
+  display: block;
+  vertical-align: bottom;
+  width: 100%;
+  height: 100%;
+}*/
+/* ---- particles.js container ---- */
+
+#particles-js {
+  width: 100%;
+  /*background-color: #17182f;*/
+  height: 100vh;
+  background-image: url('neb-particle.png');
+}
+
+
+.header {
+  /*  font-family: 'Raleway Dots', cursive;*/
+  font-family: 'Codystar', cursive;
+  color: white;
+  font-size: 7em;
+  background-color: transparent;
+}
+.starSpan {
+  position: relative;
+  background-color: transparent;
+}
+.radialOrb {
+  width: 5%;
+  height: 5%;
+  background-color: transparent;
+}
+.starForm {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  /*  border:1px solid red;*/
+  background-color: transparent;
+}
+.release-btn {
+  color: silver;
+  font-style: italic;
+  background-color: transparent;
+  font-size: .7em;
+  box-shadow: 2px 2px lavender;
+}
+.release-btn:hover {
+  border: 1px solid lavender;
+  box-shadow: 2px 2px lavender;
+}
+.form-input {
+  text-align: center;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid lavender;
+  font-size: .7em;
+  font-style: italic;
+  width: 30%;
+  box-shadow: 0px 2px silver;
+  background-color: transparent;
+  color: silver;
+}
+#star-img {
+  height: auto;
+  width: 80%;
+  background-color: transparent;
+}
