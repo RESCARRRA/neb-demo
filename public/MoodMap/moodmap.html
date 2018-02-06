@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>2180moods | U.S. Map </title><!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+  <meta content="2180moods - Mobile Mood Tracking App" name="description">
+  
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	<!--jQuery 3.2.1 --> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- amCharts javascript sources -->
+	<script type="text/javascript" src="https://www.amcharts.com/lib/3/ammap.js"></script>
+	<script type="text/javascript" src="https://www.amcharts.com/lib/3/maps/js/usaLow.js"></script>
+	
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="./assets/css/moodmap.css">
+	
+	<!-- Custom JS // Map -->
+	<script type="text/javascript" src="./assets/js/moodmap.js"></script>
+	<style>
+		a {
+			color: #fff!important;
+		}
+		a#gallup {
+			color: rgb(39,83,158)!important;
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<div class="container">
+	<div class="header">
+		<h1>U.S. 2016 Overall Well-Being</h1><br>
+		<h5 class="text-muted">The Gallup-Healthways Well-Being Index score is made up of five elements of well-being that are the core components of the best possible life: purpose, social, financial, community and physical. <a href="http://news.gallup.com/poll/125066/State-States.aspx" id="gallup">Read More</a></h5><br>
+	</div>
+
+<!-- Mood Map -->
+	<div class="row">
+		<div class="col-xs-12">
+			<!-- <img class=" img img-responsive" src="mood_map_usa.png" alt=""> -->
+			<div data-fancybox onclick="toggleDataTable()" id="map" style="width: 100%; height: 695px;"></div>
+		</div>
+	</div><br>
+	
+<!-- Slider -->
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="slidecontainer">
+				<input class="slider" id="myRange" max="65.2" min="58.9" type="range" value=".1">		
+			</div>
+		</div>
+	</div>
+	<br><br>
+
+<!-- Data Table Toggle Button -->
+	<button class="btn btn-md btn-primary" onclick="toggleDataTable()">View Data Table</button>
+	<br><br>
+<!-- Data Tables 1 and 2 -->
+	<div class="row" id="tableDiv">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-4">
+			<table class="table table-responsive table-hover">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>State</th>
+						<th>Score</th>
+					</tr>
+				</thead>
+				<tbody class="table table-body table-striped">
+					<tr>
+						<td>1</td>
+						<td class="wbState">Hawaii</td>
+						<td class="wbScore">65.2</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td class="wbState">Alaska</td>
+						<td class="wbScore">64.0</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td class="wbState">South Dakota</td>
+						<td class="wbScore">63.7</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td class="wbState">Maine</td>
+						<td class="wbScore">63.6</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td class="wbState">Vermont</td>
+						<td class="wbScore">63.5</td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td class="wbState">Colorado</td>
+						<td class="wbScore">63.5</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td class="wbState">Arizona</td>
+						<td class="wbScore">63.4</td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td class="wbState">Montana</td>
+						<td class="wbScore">63.2</td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td class="wbState">Minnesota</td>
+						<td class="wbScore">63.2</td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td class="wbState">Texas</td>
+						<td class="wbScore">63.1</td>
+					</tr>
+					<tr>
+						<td>11</td>
+						<td class="wbState">Florida</td>
+						<td class="wbScore">63.1</td>
+					</tr>
+					<tr>
+						<td>12</td>
+						<td class="wbState">Wyoming</td>
+						<td class="wbScore">63.0</td>
+					</tr>
+					<tr>
+						<td>13</td>
+						<td class="wbState">Massachusetts</td>
+						<td class="wbScore">63.0</td>
+					</tr>
+					<tr>
+						<td>14</td>
+						<td class="wbState">California</td>
+						<td class="wbScore">63.0</td>
+					</tr>
+					<tr>
+						<td>15</td>
+						<td class="wbState">North Dakota</td>
+						<td class="wbScore">62.9</td>
+					</tr>
+					<tr>
+						<td>16</td>
+						<td class="wbState">Nebraska</td>
+						<td class="wbScore">62.9</td>
+					</tr>
+					<tr>
+						<td>17</td>
+						<td class="wbState">Utah</td>
+						<td class="wbScore">62.8</td>
+					</tr>
+					<tr>
+						<td>18</td>
+						<td class="wbState">Idaho</td>
+						<td class="wbScore">62.7</td>
+					</tr>
+					<tr>
+						<td>19</td>
+						<td class="wbState">Virginia</td>
+						<td class="wbScore">62.6</td>
+					</tr>
+					<tr>
+						<td>20</td>
+						<td class="wbState">New Mexico</td>
+						<td class="wbScore">62.6</td>
+					</tr>
+					<tr>
+						<td>21</td>
+						<td class="wbState">New Hampshire</td>
+						<td class="wbScore">62.6</td>
+					</tr>
+					<tr>
+						<td>22</td>
+						<td class="wbState">Iowa</td>
+						<td class="wbScore">62.6</td>
+					</tr>
+					<tr>
+						<td>23</td>
+						<td class="wbState">Washington</td>
+						<td class="wbScore">62.5</td>
+					</tr>
+					<tr>
+						<td>24</td>
+						<td class="wbState">Oregon</td>
+						<td class="wbScore">62.5</td>
+					</tr>
+					<tr>
+						<td>25</td>
+						<td class="wbState">New Jersey</td>
+						<td class="wbScore">62.5</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-xs-2"></div>
+		<div class="col-xs-4">
+			<table class="table table-responsive table-hover">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th class="wbState">State</th>
+						<th class="wbScore">Score</th>
+					</tr>
+				</thead>
+				<tbody class="table table-body table-striped">
+					<tr>
+						<td>26</td>
+						<td class="wbState">North Carolina</td>
+						<td class="wbScore">62.4</td>
+					</tr>
+					<tr>
+						<td>27</td>
+						<td class="wbState">Wisconsin</td>
+						<td class="wbScore">62.3</td>
+					</tr>
+					<tr>
+						<td>28</td>
+						<td class="wbState">South Carolina</td>
+						<td class="wbScore">62.3</td>
+					</tr>
+					<tr>
+						<td>29</td>
+						<td class="wbState">Georgia</td>
+						<td class="wbScore">62.3</td>
+					</tr>
+					<tr>
+						<td>30</td>
+						<td class="wbState">Pennsylvania</td>
+						<td class="wbScore">62.1</td>
+					</tr>
+					<tr>
+						<td>31</td>
+						<td class="wbState">Maryland</td>
+						<td class="wbScore">62.0</td>
+					</tr>
+					<tr>
+						<td>32</td>
+						<td class="wbState">New York</td>
+						<td class="wbScore">61.8</td>
+					</tr>
+					<tr>
+						<td>33</td>
+						<td class="wbState">Nevada</td>
+						<td class="wbScore">61.8</td>
+					</tr>
+					<tr>
+						<td>34</td>
+						<td class="wbState">Kansas</td>
+						<td class="wbScore">61.8</td>
+					</tr>
+					<tr>
+						<td>35</td>
+						<td class="wbState">Missouri</td>
+						<td class="wbScore">61.7</td>
+					</tr>
+					<tr>
+						<td>36</td>
+						<td class="wbState">Connectibut</td>
+						<td class="wbScore">61.7</td>
+					</tr>
+					<tr>
+						<td>37</td>
+						<td class="wbState">Illinois</td>
+						<td class="wbScore">61.6</td>
+					</tr>
+					<tr>
+						<td>38</td>
+						<td class="wbState">Tennessee</td>
+						<td class="wbScore">61.5</td>
+					</tr>
+					<tr>
+						<td>39</td>
+						<td class="wbState">Michigan</td>
+						<td class="wbScore">61.4</td>
+					</tr>
+					<tr>
+						<td>40</td>
+						<td class="wbState">Delaware</td>
+						<td class="wbScore">61.4</td>
+					</tr>
+					<tr>
+						<td>41</td>
+						<td class="wbState">Rhode Island</td>
+						<td class="wbScore">61.3</td>
+					</tr>
+					<tr>
+						<td>42</td>
+						<td class="wbState">Mississippi</td>
+						<td class="wbScore">61.3</td>
+					</tr>
+					<tr>
+						<td>43</td>
+						<td class="wbState">Louisiana</td>
+						<td class="wbScore">61.0</td>
+					</tr>
+					<tr>
+						<td>44</td>
+						<td class="wbState">Alabama</td>
+						<td class="wbScore">61.0</td>
+					</tr>
+					<tr>
+						<td>45</td>
+						<td class="wbState">Ohio</td>
+						<td class="wbScore">60.9</td>
+					</tr>
+					<tr>
+						<td>46</td>
+						<td class="wbState">Arkansas</td>
+						<td class="wbScore">60.8</td>
+					</tr>
+					<tr>
+						<td>47</td>
+						<td class="wbState">Oklahoma</td>
+						<td class="wbScore">60.5</td>
+					</tr>
+					<tr>
+						<td>48</td>
+						<td class="wbState">Kentucky</td>
+						<td class="wbScore">60.5</td>
+					</tr>
+					<tr>
+						<td>49</td>
+						<td class="wbState">Indiana</td>
+						<td class="wbScore">60.5</td>
+					</tr>
+					<tr>
+						<td>50</td>
+						<td class="wbState">West Virginia</td>
+						<td class="wbScore">58.9</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-xs-1"></div>
+	</div>
+	<br><br>
+</div>
+
+	<script type="text/javascript">
+		var x = document.getElementById("tableDiv");
+		    x.style.display = "none";
+
+		function toggleDataTable() {
+		    if (x.style.display === "none") {
+		        x.style.display = "block";
+		    } else {
+		        x.style.display = "none";
+		    }
+		}
+		var slider = document.getElementById("myRange");
+		var output = document.getElementById("demo");
+		// output.innerHTML = slider.value; 
+
+		// Display the default slider value
+
+		// Update the current slider value (each time you drag the slider handle)
+		slider.oninput = function() {
+		    output.innerHTML = this.value;
+		}
+	</script>
+</body>
+</html>
