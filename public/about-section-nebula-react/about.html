@@ -194,8 +194,6 @@ var AboutNebula = React.createClass({
 
   render: function render() {
     var aboutBody = "N E B U L A  /  body text.";
-    var teamBody = "T E A M  /  body text.";
-    var moreBody = "M O R E  /  body text.";
     return React.createElement(
       "div",
       { className: "flex" },
@@ -204,9 +202,7 @@ var AboutNebula = React.createClass({
       React.createElement(
         PanelGroup,
         { dpid: "1" },
-        React.createElement(Panel, { title: "NEBULA", body: aboutBody, id: "1", addClass: "", dpid: "#1" }),
-<!--         React.createElement(Panel, { title: "TEAM", body: teamBody, id: "2", addClass: "", dpid: "#1" }),
-        React.createElement(Panel, { title: "MORE", body: moreBody, id: "3", addClass: "", dpid: "#1" }), -->
+        React.createElement(Panel, { title: "NEBULA", body: aboutBody, id: "1", addClass: "in", dpid: "#1" }),
       )
     );
   }
