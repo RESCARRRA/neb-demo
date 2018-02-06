@@ -109,7 +109,7 @@ a:hover {
 
 
   
-
+<script src="about.js"></script><!-- 
 <script type="text/babel">
 
 $(function () {
@@ -194,6 +194,8 @@ var AboutNebula = React.createClass({
 
   render: function render() {
     var aboutBody = "N E B U L A  /  body text.";
+    var teamBody = "T E A M  /  body text.";
+    var moreBody = "M O R E  /  body text.";
     return React.createElement(
       "div",
       { className: "flex" },
@@ -203,13 +205,15 @@ var AboutNebula = React.createClass({
         PanelGroup,
         { dpid: "1" },
         React.createElement(Panel, { title: "NEBULA", body: aboutBody, id: "1", addClass: "in", dpid: "#1" }),
-      )
+        React.createElement(Panel, { title: "TEAM", body: teamBody, id: "2", addClass: "in", dpid: "#1" }),
+        React.createElement(Panel, { title: "MORE", body: moreBody, id: "3", addClass: "in", dpid: "#1" }),
+      
     );
   }
 });
 
 ReactDOM.render(React.createElement(AboutNebula, null), document.getElementById('main'));
-</script>
+</script> -->
 
 </body>
 
