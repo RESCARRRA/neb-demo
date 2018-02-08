@@ -7,6 +7,13 @@
   background: -moz-linear-gradient(#111, #222);
   background: -o-linear-gradient(#111, #222);
  }
+ .today {
+  color: white;
+ }
+ .active {
+  box-shadow: 1px 1.5px white;
+ }
+
  #colorwheel {
   margin-top: 20px;
   margin-bottom: 0px;
